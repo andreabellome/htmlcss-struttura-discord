@@ -4,6 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --min_height_header: 400px;
+    --min_height_head_cont: 30px;
+    --width_nav_c: 75%;
+}
+
 /* END: reset */
 
 header{
@@ -12,11 +18,10 @@ header{
     align-items: center;
 
     background-color: lightblue;
-    min-height: 80px;
+    min-height: var(--min_height_header);
 }
 
 /* START: barra di navigazione */
-
 .nav_flex_container{
 
     display: flex;
@@ -24,7 +29,7 @@ header{
     align-items: center;
 
     background-color: orange;
-    min-height: 40px;
+    min-height: var(--min_height_head_cont);
     width: 80%;
     margin: auto;
 
@@ -36,8 +41,8 @@ header{
     align-items: center;
     justify-content: left;
 
-    min-height: 40px;
-    width: 15%;
+    min-height: var(--min_height_head_cont);
+    width: calc((100% - var(--width_nav_c))/2 );
     border: 1px solid black;
     padding-left: 10px;
 }
@@ -49,8 +54,8 @@ header{
     align-items: center;
     justify-content: center;
 
-    min-height: 40px;
-    width: 70%;
+    min-height: var(--min_height_head_cont);
+    width: var(--width_nav_c);
     border: 1px solid black;
 }
 
@@ -60,14 +65,31 @@ header{
     align-items: center;
     justify-content: right;
 
-    min-height: 40px;
-    width: 15%;
+    min-height: var(--min_height_head_cont);
+    width: calc((100% - var(--width_nav_c))/2 );
     border: 1px solid black;
     padding-right: 10px;
 }
 /* END: barra di navigazione */
 
 /* START: barra di download */
+.down_flex_container{
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    border: 1px solid black;
+    background-color: blue;
+    width: 100%;
+    min-height: calc(var(--min_height_header) - 50px);
+    
+}
+
+.pink_box{
+    background-color: violet;
+    width: 55%;
+    min-height: 300px;
+    margin: auto;
+}
 /* END: barra di download */
