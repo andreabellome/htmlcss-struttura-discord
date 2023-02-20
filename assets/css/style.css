@@ -5,11 +5,13 @@
     box-sizing: border-box;
 }
 :root{
-    --min_height_header: 400px;
+    --min_height_header: 650px;
     --min_height_head_cont: 30px;
+    --min_height_main_cont: 700px;
+    --min_heigth_last_box: calc(var(--min_height_main_cont) + 200px);
+    --dist_container: 150px;
     --width_nav_c: 75%;
 }
-
 /* END: reset */
 
 header{
@@ -44,7 +46,9 @@ header{
     min-height: var(--min_height_head_cont);
     width: calc((100% - var(--width_nav_c))/2 );
     border: 1px solid black;
+    border-style: dashed;
     padding-left: 10px;
+
 }
 
 .card_c{
@@ -57,6 +61,8 @@ header{
     min-height: var(--min_height_head_cont);
     width: var(--width_nav_c);
     border: 1px solid black;
+    border-style: dashed;
+
 }
 
 .card_r{
@@ -68,7 +74,9 @@ header{
     min-height: var(--min_height_head_cont);
     width: calc((100% - var(--width_nav_c))/2 );
     border: 1px solid black;
+    border-style: dashed;
     padding-right: 10px;
+
 }
 /* END: barra di navigazione */
 
@@ -79,17 +87,92 @@ header{
     flex-direction: column;
     align-items: center;
 
-    border: 1px solid black;
     background-color: blue;
     width: 100%;
     min-height: calc(var(--min_height_header) - 50px);
-    
+
 }
 
 .pink_box{
     background-color: violet;
     width: 55%;
-    min-height: 300px;
+    min-height: calc(var(--min_height_header) - var(--dist_container));
     margin: auto;
 }
 /* END: barra di download */
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.nav_main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid red;
+    width: 100%;
+    min-height: var(--min_height_main_cont);
+
+}
+
+.nav_main:nth-child(even){
+    background-color: lightgrey;
+}
+
+.nav_main:last-child{
+    min-height: var(--min_heigth_last_box);
+}
+
+.nav_main:nth-child(even) > .main_box{
+    flex-direction: row-reverse;
+}
+
+.last_box{
+    background-color: green;
+    width: 70%;
+    min-height: calc(var(--min_heigth_last_box) - var(--dist_container));
+    margin: auto;
+}
+
+.main_box{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 70%;
+    min-height: calc(var(--min_height_main_cont) - var(--dist_container));
+    margin: auto;
+    
+}
+
+.main_box:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.box_1{
+    background-color: green;
+    min-height: calc(var(--min_height_main_cont) - var(--dist_container));
+    width: 70%;
+    margin: auto;
+
+    border: 1px solid black;
+    border-style: dashed;
+}
+
+.box_2{
+    background-color: yellow;
+    min-height: calc(var(--min_height_main_cont) - var(--dist_container));
+    width: 30%;
+    margin: auto;
+
+    border: 1px solid black;
+    border-style: dashed;
+}
