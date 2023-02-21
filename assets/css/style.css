@@ -29,6 +29,7 @@ header{
 
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 
     background-color: orange;
@@ -39,11 +40,12 @@ header{
 }
 
 .card_l{
+    
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
-
+    
     min-height: var(--min_height_head_cont);
     width: calc((100% - var(--width_nav_c))/2 );
     border: 1px solid black;
@@ -63,10 +65,16 @@ header{
     width: var(--width_nav_c);
     border: 1px solid black;
     border-style: dashed;
+    list-style-type: none;
+}
 
+ul li{
+    display: inline-block;
+    margin: 0 10px;
 }
 
 .card_r{
+    
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -77,6 +85,7 @@ header{
     border: 1px solid black;
     border-style: dashed;
     padding-right: 10px;
+    text-decoration: none;
 
 }
 
