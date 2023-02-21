@@ -220,6 +220,7 @@ footer{
 
 .sub_foot_box{ /* START: barra di download */
 
+    /* aggiungi un flex here per logo finale e bottone */
     background-color: blue;
     width: var(--width_boxes);
     height: calc( 10/100*var(--min_height_header) );
