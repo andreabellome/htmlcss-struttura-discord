@@ -98,15 +98,13 @@ header{
     background-color: #404EED;
     width: 100%;
     min-height: calc(var(--min_height_header) - 50px);
-    /* padding-top: 20px;
-    padding-bottom: 20px; */
 
 }
 
 .pink_box{
     background-color: violet;
     min-height: calc(var(--min_height_header) - var(--dist_container));
-    /* height: 60%; */
+    /* height: calc(var(--min_height_header) - var(--dist_container)); */
     width: 55%;
     margin: auto;
 } /* END: barra di download */
