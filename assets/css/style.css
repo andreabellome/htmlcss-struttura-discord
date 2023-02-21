@@ -95,16 +95,19 @@ header{
     flex-direction: column;
     align-items: center;
 
-    background-color: blue;
+    background-color: #404EED;
     width: 100%;
     min-height: calc(var(--min_height_header) - 50px);
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
 
 }
 
 .pink_box{
     background-color: violet;
-    width: 55%;
     min-height: calc(var(--min_height_header) - var(--dist_container));
+    /* height: 60%; */
+    width: 55%;
     margin: auto;
 } /* END: barra di download */
 
@@ -132,7 +135,7 @@ main{
 }
 
 .nav_main:nth-child(even){
-    background-color: lightgrey;
+    background-color: #F6F6F6;
 }
 
 .nav_main:last-child{
@@ -219,12 +222,17 @@ footer{
 }
 
 .sub_foot_box{ /* START: barra di download */
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-    /* aggiungi un flex here per logo finale e bottone */
-    background-color: blue;
+    background-color: orange;
     width: var(--width_boxes);
     height: calc( 10/100*var(--min_height_header) );
-
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* END: footer */
